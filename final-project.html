@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body>
+    <audio id="bg-music" autoplay loop>
+        <source src="./jobzilla-music-audio.mp3" type="audio/mp3" />
+    </audio>
+    <br>
+    <button id="mute-btn" class="btn-outline" style="position: fixed; top: 20px; right: 20px; z-index: 20;">
+        🔊 Mute
+    </button>
+    <script>
+        const music = document.getElementById('bg-music');
+        const muteBtn = document.getElementById('mute-btn');
+
+        muteBtn.addEventListener('click', () => {
+            music.muted = !music.muted;
+            muteBtn.textContent = music.muted ? '🔇 Unmute' : '🔊 Mute';
+        });
+    </script>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <nav>
+            <a href="about.html" class="tooltip">
+                <i class="fas fa-user"></i> About
+                <span class="tooltip-text">Learn more about me and my background.</span>
+            </a>
+            <a href="projects.html" class="tooltip">
+                <i class="fas fa-folder-open"></i> Projects
+                <span class="tooltip-text">Explore my portfolio of projects.</span>
+            </a>
+            <a href="./contact.html" class="tooltip">
+                <i class="fas fa-envelope"></i> Contact
+                <span class="tooltip-text">Get in touch with me.</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <h1>Mohamad Dureid</h1>
+            <p class="centered-slogan">I see the invisible and do the impossible.</p>
+        </header>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Project One</h3>
+                    <p>A web app to manage tasks efficiently with real-time updates.</p>
+                    <div class="project-images">
+                        <img src="./1358310.png" alt="Project One" />
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Project Two</h3>
+                    <p>An e-commerce platform with secure payments and fast delivery.</p>
+                    <div class="project-images">
+                        <img src="./download-dark-2.jpg" alt="Project Two" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" placeholder="Your Name" />
+                <input type="email" placeholder="Your Email" />
+                <textarea rows="4" placeholder="Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <p>"Mohamad is a highly skilled developer with excellent problem-solving abilities."</p>
+                    <h4>- Sarah Johnson</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Great to work with, always delivers quality work on time."</p>
+                    <h4>- James Lee</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"His passion for data and development is evident in every project."</p>
+                    <h4>- Emily Davis</h4>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="social-icons">
+                <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Mohamad Dureid. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
